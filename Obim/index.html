@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBim</title>
+    <link rel="stylesheet" href="./obim.css">
+</head>
+<body>
+
+
+
+
+
+    <div id="phone-screen" class="phone-screen">
+        
+        <div class="letter-container" id="letter">
+            <span id="text"></span>
+            <span class="cursor"></span>
+        </div>
+
+
+        
+ <br><br>     
+<button id="playButton"><strong>Listen while you Read❤️</strong></button>
+<audio id="myAudio" src="./audio/Alex_Warren_Ordinary.mp3"></audio>
+
+
+    </div>
+
+
+
+
+<script>
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    function createHeart(){
+        const heart = 
+        document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = '❤️'
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+        
+        document.body.appendChild(heart);
+
+        heart.addEventListener('animationend', function(){
+            heart.removed();
+        });
+    }
+
+    setInterval(createHeart, 300);
+});
+
+
+
+
+
+</script>
+
+
+
+<script src="./obim.js"></script>
+</body>
+</html>
